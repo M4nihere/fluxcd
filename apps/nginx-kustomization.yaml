@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/<your-username>/<repository-name>
+  url: https://github.com/m4nihere/fluxcd
   ref:
     branch: main
 ---
