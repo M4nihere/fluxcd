@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: nginx
-  namespace: manish
+  namespace: flux-system
 spec:
   interval: 1m
   url: https://github.com/m4nihere/fluxcd
@@ -13,7 +13,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: nginx
-  namespace: manish
+  namespace: flux-system
 spec:
   interval: 1m
   path: ./apps/nginx
@@ -21,4 +21,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: nginx
-  targetNamespace: default
+  targetNamespace: manish
